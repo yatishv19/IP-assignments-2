@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing Table</title>
+<style>
+    body {
+        font-family: Arial;
+        padding: 40px;
+        background: #f7f7f7;
+    }
+    .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media(max-width:600px){
+        .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+    .featured {
+        border: 2px solid #007bff;
+        transform: scale(1.03);
+    }
+</style>
+</head>
+<body>
+
+<div class="grid">
+    <div class="card">
+        <h2>Basic</h2>
+        <p>₹199/month</p>
+        <p>Good for small personal projects.</p>
+    </div>
+
+    <div class="card featured">
+        <h2>Pro (Recommended)</h2>
+        <p>₹499/month</p>
+        <p>Best for students and creators.</p>
+    </div>
+
+    <div class="card">
+        <h2>Enterprise</h2>
+        <p>₹999/month</p>
+        <p>Teams who need full control.</p>
+    </div>
+</div>
+
+</body>
+</html>
