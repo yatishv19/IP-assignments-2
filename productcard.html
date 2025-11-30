@@ -2,37 +2,106 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Product Card</title>
+<title>Product Cards</title>
+
 <style>
-    body { padding:40px; font-family:Arial; background:#f6f6f6; }
-    .card {
-        width:280px;
-        background:white;
-        border-radius:12px;
-        box-shadow:0 4px 20px rgba(0,0,0,0.1);
-        padding:20px;
-        transition:0.3s;
+    body { 
+        padding: 40px; 
+        font-family: "Poppins", Arial, sans-serif; 
+        background: #63d394; 
     }
-    .card:hover { transform:translateY(-5px); }
-    img { width:100%; border-radius:10px; }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #222;
+    }
+
+    /* Product Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+        justify-items: center;
+    }
+
+    /* Product Card */
+    .card {
+        width: 260px;
+        background: rgb(217, 188, 238);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+        padding: 18px;
+        transition: 0.3s;
+    }
+    .card:hover { 
+        transform: translateY(-6px); 
+        box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    }
+
+    img { 
+        width: 100%; 
+        border-radius: 10px; 
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #222;
+        margin: 12px 0 6px;
+    }
+
+    .price {
+        font-size: 16px;
+        color: #007bff;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
     button {
-        width:100%;
-        padding:12px;
-        border:none;
-        background:#007bff;
-        color:white;
-        border-radius:6px;
-        margin-top:10px;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    button:hover {
+        opacity: 0.9;
     }
 </style>
 </head>
 <body>
 
-<div class="card">
-    <img src="https://picsum.photos/300/200?tech" alt="Laptop">
-    <h3>Student Laptop</h3>
-    <p>₹54,999</p>
-    <button>Add to Cart</button>
+<h1>Our Featured Products</h1>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/qtSwgqwwLlmQAiGLKj4kV0K-D_m-6841CQ8AlZRLfcs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0LzY3/b0hFcGE5c2dZZVRj/dzNLQzNCNWguanBn" alt="Laptop">
+        <div class="title">Student Laptop</div>
+        <div class="price">₹54,999</div>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/hr4kQy1bFUxH7AfT0w5vDZz5hsvEFRQ8SArnqpj8Mxo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3FD/YnRUZnZrOVdWcGFR/M0tSVHhzV0IuanBn" alt="Smartphone">
+        <div class="title">Iphone 17 Pro Max</div>
+        <div class="price">₹1,09,499</div>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/OrimmFui84InI0xqjxdMC6dItfsw7F2liJqtXsFgB44/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzM5LzY4LzMw/LzM2MF9GXzIzOTY4/MzAwN19icG1oeFNS/c0VYNU1laEU4ejN6/YUNRclRzbU94RHRm/Zi5qcGc" alt="Smartwatch">
+        <div class="title">Fitness Smartwatch</div>
+        <div class="price">₹5,999</div>
+        <button>Add to Cart</button>
+    </div>
+
 </div>
 
 </body>

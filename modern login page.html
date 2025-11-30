@@ -3,50 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Page</title>
+
 <style>
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #1e4ed4;
+        --bg-gradient: linear-gradient(135deg, #2563eb, #6a00ff);
+        --radius: 10px;
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+    }
+
     body {
         margin: 0;
         height: 100vh;
-        background: linear-gradient(135deg, #007bff, #6a00ff);
+        background: var(--bg-gradient);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: Arial;
+        font-family: "Inter", Arial, sans-serif;
     }
+
     .box {
         background: white;
-        width: 320px;
-        padding: 30px;
-        border-radius: 12px;
+        width: 340px;
+        padding: 34px;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
+
+    h2 {
+        margin: 0 0 18px;
+        font-size: 1.6rem;
+        color: var(--text-dark);
+        text-align: center;
+        font-weight: 600;
+    }
+
+    label {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 4px;
+        display: block;
+    }
+
     input {
         width: 100%;
         padding: 12px;
-        margin: 10px 0;
+        margin-bottom: 16px;
         border-radius: 6px;
-        border: 1px solid #ccc;
+        border: 1px solid #d1d5db;
+        font-size: 0.95rem;
+        transition: 0.25s;
     }
+
     input:focus {
-        outline: 2px solid #007bff;
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
     }
+
     button {
         width: 100%;
-        padding: 12px;
-        background: #007bff;
+        padding: 13px;
+        background: var(--primary);
         border: none;
         border-radius: 6px;
         color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.25s ease;
+    }
+
+    button:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
     }
 </style>
+
 </head>
+
 <body>
 
 <div class="box">
-    <h2>Login</h2>
-    <label>Email</label>
-    <input type="email" placeholder="Enter your email">
-    <label>Password</label>
-    <input type="password" placeholder="Enter your password">
+    <h2>Welcome Back</h2>
+
+    <label for="email">Email Address</label>
+    <input id="email" type="email" placeholder="example@tcet.edu">
+
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Enter your password">
+
     <button>Sign In</button>
 </div>
 

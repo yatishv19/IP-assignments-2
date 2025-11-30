@@ -1,53 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Profile Card - Yatish</title>
+<meta charset="UTF-8" />
+<title>Profile Card</title>
+
 <style>
+    :root {
+        --primary: #2563eb; /* Elegant blue */
+        --bg: #f3f4f6;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --radius: 14px;
+    }
+
     body {
         margin: 0;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #f5f5f5;
-        font-family: Arial, sans-serif;
+        background: var(--bg);
+        font-family: "Inter", Arial, sans-serif;
     }
+
     .card {
-        width: 320px;
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
+        background: #ffffff;
+        width: 340px;
+        padding: 32px;
+        border-radius: var(--radius);
+        box-shadow: 0 12px 35px rgba(0,0,0,0.08);
         text-align: center;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
     }
-    .card img {
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    }
+
+    .avatar {
         width: 120px;
+        height: 120px;
         border-radius: 50%;
-        margin-bottom: 15px;
+        object-fit: cover;
+        margin-bottom: 16px;
     }
-    .card button {
+
+    h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: var(--text);
+    }
+
+    p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin: 6px 0 18px;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    button {
         padding: 10px 18px;
+        border-radius: var(--radius);
         border: none;
-        border-radius: 6px;
-        margin: 8px;
+        font-size: 0.9rem;
         cursor: pointer;
-        transition: 0.3s;
+        transition: 0.2s;
     }
-    .primary { background:#007bff; color:white; }
-    .primary:hover { background:#005fcc; }
-    .secondary { background:#eee; }
-    .secondary:hover { background:#ddd; }
+
+    .primary {
+        background: var(--primary);
+        color: white;
+    }
+
+    .primary:hover {
+        background: #1d4ed8;
+    }
+
+    .secondary {
+        background: #e5e7eb;
+    }
+
+    .secondary:hover {
+        background: #92b6ed;
+    }
 </style>
+
 </head>
 <body>
 
 <div class="card">
-    <img src="https://via.placeholder.com/120" alt="Yatish">
-    <h2>Yatish</h2>
-    <p>BCA Student • TCET • 1st Year</p>
-    <button class="primary">Message</button>
-    <button class="secondary">View Profile</button>
+    <img src="https://imgs.search.brave.com/4iqYDfhiSReBH7GBP2YmphQdpINfZ3mFU46xf_umruI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzL2Ew/LzFmLzEzYTAxZmU5/YmVkMWY0OWIwOWE1/YWQ4MTNjMWM3ZTJl/LmpwZw" class="avatar" alt="Yatish">
+    <h2>Yatish Vaidya</h2>
+    <p>BCA Student • TCET Mumbai</p>
+
+    <div class="actions">
+        <button class="primary">Message</button>
+        <button class="secondary">Portfolio</button>
+    </div>
 </div>
 
 </body>

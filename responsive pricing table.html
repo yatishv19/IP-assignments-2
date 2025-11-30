@@ -3,53 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <title>Pricing Table</title>
+
 <style>
     body {
-        font-family: Arial;
+        font-family: "Poppins", Arial, sans-serif;
         padding: 40px;
-        background: #f7f7f7;
+        background: #eef1f5;
+        margin: 0;
     }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 35px;
+        color: #222;
+    }
+
+    /* Grid Layout */
     .grid {
         display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        padding: 0 20px;
     }
-    @media(max-width:600px){
-        .grid { grid-template-columns: 1fr; }
-    }
+
+    /* Cards */
     .card {
         background: white;
-        padding: 25px;
-        border-radius: 12px;
+        padding: 30px 25px;
+        border-radius: 16px;
         text-align: center;
-        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: 0.25s;
     }
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Featured Plan */
     .featured {
         border: 2px solid #007bff;
-        transform: scale(1.03);
+        transform: scale(1.04);
+    }
+    .featured:hover {
+        transform: scale(1.06) translateY(-4px);
+    }
+
+    .price {
+        font-size: 26px;
+        margin: 10px 0;
+        font-weight: 600;
+        color: #007bff;
+    }
+
+    .desc {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    button {
+        padding: 12px 22px;
+        border-radius: 6px;
+        border: none;
+        background: #007bff;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+    button:hover {
+        opacity: 0.9;
     }
 </style>
 </head>
+
 <body>
 
+<h1>Choose Your Plan</h1>
+
 <div class="grid">
+
     <div class="card">
         <h2>Basic</h2>
-        <p>₹199/month</p>
-        <p>Good for small personal projects.</p>
+        <div class="price">₹199/month</div>
+        <p class="desc">Perfect for small personal projects.</p>
+        <button>Select Plan</button>
     </div>
 
     <div class="card featured">
         <h2>Pro (Recommended)</h2>
-        <p>₹499/month</p>
-        <p>Best for students and creators.</p>
+        <div class="price">₹499/month</div>
+        <p class="desc">Great for students, creators, and learners.</p>
+        <button>Select Plan</button>
     </div>
 
     <div class="card">
         <h2>Enterprise</h2>
-        <p>₹999/month</p>
-        <p>Teams who need full control.</p>
+        <div class="price">₹999/month</div>
+        <p class="desc">Ideal for teams that need heavy control.</p>
+        <button>Select Plan</button>
     </div>
+
 </div>
 
 </body>

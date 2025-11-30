@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TCET Landing Page</title>
+
+<style>
+    :root {
+        --primary: #2563eb; 
+        --text-dark: #1f2937;
+        --text-light: #6b7280;
+        --bg-light: #f3f4f6;
+        --radius: 10px;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: #ffffff;
+        color: var(--text-dark);
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 48px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        background: white;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav a {
+        margin-left: 26px;
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        color: var(--primary);
+    }
+
+    @media (max-width: 600px) {
+        header { flex-direction: column; gap: 12px; }
+        nav a { margin-left: 14px; }
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 130px 40px;
+        text-align: center;
+        background: var(--bg-light);
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+        color: var(--text-light);
+    }
+
+    .hero button {
+        background: var(--primary);
+        color: white;
+        padding: 14px 28px;
+        border: none;
+        border-radius: var(--radius);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.25s ease;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
+    }
+
+    .hero button:hover {
+        background: #1e4ed4;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.32);
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1 style="letter-spacing:0.5px;">TCET Projects</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Build. Learn. Grow.</h2>
+    <p>Your journey in tech starts here — explore your creativity at TCET.</p>
+    <button>Get Started</button>
+</section>
+
+</body>
+</html>
