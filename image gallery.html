@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Gallery</title>
+<style>
+    body {
+        margin: 0;
+        padding: 40px;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    @media(max-width:900px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width:600px) {
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+
+<h1>Cat Gallery</h1>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="https://imgs.search.brave.com/fHcMIrMLLg5yTEDomfxH4YXYHfl3-ZRpJGM9_gf-H4Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/c2hvdy1tZS10aGUt/ZnVubmllc3QtcGlj/dHVyZXMtb2YteW91/ci1jYXRzLXYwLWNr/b213Z3ZrbmR2ZjEu/anBlZz9mb3JtYXQ9/cGpwZyZhdXRvPXdl/YnAmcz0zMjgyZDk4/NWE3MmY1ZGI5MWI5/MGQzOTc2Zjg0ZGU3/YzI3OWVjZDgw" alt="Cat 1">
+
+    </div>
+    <div class="gallery-item">
+        <img src="https://imgs.search.brave.com/HY727IDM-6GDteiKNI3t1MA06LaIa4Dr5DVO5yAn9LY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTE0/NjIwODg2L3Bob3Rv/L3ByZXR0eS1naW5n/ZXItY2F0LXByaWNr/ZWQtdXAtZWFycy1p/bi10aGUtYWxlcnQu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PTdrZXNNeUV2V1g5/bnZHYWZYVXVQaVM5/dVlYaFZGd3ZWZlpP/VG5aTUtzc289" alt="Cat 2">
+    </div>
+    <div class="gallery-item">
+        <img src="https://imgs.search.brave.com/-Ow7u68z5ji4oFx08LYMMTu1Wfyvg9odKop-90nB5SQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDc3/MTc0NjE5L3Bob3Rv/L29yYW5nZS1jYXQt/ZmFjZS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9WFduY2s0/NG5WOTFLajZ5bThl/LVpZUXBkemp6MFV0/OGJ0OVZTYWtQWWJ4/RT0" alt="Cat 3">
+    </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Post - TCET Tech Journey</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #f5f5f5;
+        color: #333;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        color: #007bff;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    @media(max-width:900px){
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .post {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .post img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .related-post {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .related-post img {
+        width: 100%;
+        display: block;
+    }
+
+    .related-post h3 {
+        margin: 10px;
+        font-size: 1rem;
+        color: #007bff;
+    }
+
+    .related-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+</style>
+</head>
+<body>
+
+<h1>TCET Tech Journey</h1>
+
+<div class="container">
+    <!-- Main Article -->
+    <div class="post">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Hero Technology Image">
+        <h2>Learning Web Development as a Beginner</h2>
+        <p>Hi, I’m Yatish, a 1st-year BCA student at Thakur College of Engineering (TCET). I’m just starting to explore web development and computer technologies.</p>
+        <p>In this post, I’m sharing some of the things I’m learning, like how to use CSS Grid and Flexbox to make layouts, and why responsive design is important so websites look good on any device.</p>
+        <p>I’m also trying out animations, buttons, and interactive elements to make websites more fun and user-friendly. Practicing these small projects is helping me understand how real websites work and improving my coding skills.</p>
+        <p>I hope sharing my learning journey can be helpful for other beginners too.</p>
+    </div>
+
+    <!-- Related Posts Sidebar -->
+    <div class="sidebar">
+        <div class="related-post">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Post 1">
+            <h3>Playing with Flexbox</h3>
+        </div>
+        <div class="related-post">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Post 2">
+            <h3>Trying CSS Grid Layouts</h3>
+        </div>
+        <div class="related-post">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Post 3">
+            <h3>Making Websites Look Nice on Mobile</h3>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
